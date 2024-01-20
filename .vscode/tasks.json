@@ -7,12 +7,15 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                // "${file}",
+                "${workspaceFolder}/src/*.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "-std=c++11 ",
                 "-Wall ",
-                "`wx-config --cflags --libs`"
+                "`wx-config --cflags --libs`",
+				"-I",
+				"${workspaceFolder}/include",
             ],
             "options": {
                 "cwd": "${fileDirname}"
